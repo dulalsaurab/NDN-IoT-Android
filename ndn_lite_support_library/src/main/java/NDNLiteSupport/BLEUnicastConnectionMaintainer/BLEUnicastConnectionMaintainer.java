@@ -99,7 +99,7 @@ public class BLEUnicastConnectionMaintainer {
                 String deviceAddress = deviceAndScanRecord.bluetoothDevice.getAddress();
                 if (!BLEManager.getInstance().isConnected(deviceAddress)) {
                     LogHelpers.LogDebug(TAG, "in onScanCycleEnded, attempting to connect to device with mac " +
-                     "address deviceAddress");
+                     "address"+deviceAddress);
                     BLEManager.getInstance().connect(deviceAddress);
                 }
             }
